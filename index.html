@@ -12,6 +12,10 @@
     <div class="main-container">
         <div class="settings">
             <button class="reset-button">Reset</button>
+            <div class="slider-container">
+                <div class="range-output">16x16</div>
+                <input type="range" min="1" max="64" value="16" class="slider" id="slider-range" oninput="changeGridSize(this)">
+            </div>
         </div>
         <div id="grid-container" class="grid"></div>
     </div>
