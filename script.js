@@ -2,6 +2,7 @@
 const grid_container = document.getElementById("grid-container");
 const reset_button = document.getElementsByClassName("reset-button")[0];
 const slider = document.getElementById("slider-range");
+const color_choice = document.getElementById("color-choice")
 
 let mouse_down = false;
 
@@ -24,18 +25,17 @@ const colorIn = (e) => {
         return;
     };
     
+    chosen_color = color_choice.value;
     e.target.classList.add('color-in');
+    e.target.style.setProperty('--pen-color', chosen_color);
 }
 
 const resetGridColors = () => {
-    console.log('inside reset');
     const all_grid_items = document.querySelectorAll('.grid-item');
-    console.log(all_grid_items);
     all_grid_items.forEach((item) => {
         item.classList.remove('color-in');
     });
 };
-
 
 const createGrid = (rows, cols) => {
     grid_container.style.setProperty('--grid-rows', rows);
