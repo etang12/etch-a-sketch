@@ -25,9 +25,8 @@ const colorIn = (e) => {
         return;
     };
     
-    chosen_color = color_choice.value;
     e.target.classList.add('color-in');
-    e.target.style.setProperty('--pen-color', chosen_color);
+    e.target.style.setProperty('--pen-color', color_choice.value);
 }
 
 const resetGridColors = () => {
